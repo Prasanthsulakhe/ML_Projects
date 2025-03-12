@@ -59,7 +59,7 @@ This project is licensed under the MIT License.
 
 ## 🤝 Connect with Me
 Feel free to reach out for collaborations or discussions:
-- *Author*: [Prasanth Sulakhe]
+- *Author*: Prasanth Sulakhe
 - *Contact Me*: sulakheprasanth@gmail.com
 
 ---
