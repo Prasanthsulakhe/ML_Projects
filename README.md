@@ -1,66 +1,43 @@
-# 📌 Customer Churn Prediction in the Telecom Industry
+Inventory Management System
+📌 Project Overview
+The Inventory Management System is a SQL-based database project designed to efficiently manage suppliers, products, stock, customers, and orders. It automates stock updates and purchase order generation using triggers.
 
-## 📖 Project Overview
-Customer churn is a major concern in the telecom industry. This project aims to predict whether a customer will churn (leave the service) based on various factors such as contract type, monthly charges, tenure, and service usage. By leveraging Machine Learning, we build predictive models to help telecom companies identify at-risk customers and take proactive retention measures.
+📂 Database Structure
+The project consists of the following tables:
 
-## 📂 Dataset Information
-The dataset consists of telecom customer records with both numerical and categorical features:
-- *customerID*: Unique identifier for each customer
-- *gender*: Male or Female
-- *SeniorCitizen*: 1 if senior citizen, 0 otherwise
-- *Partner, Dependents*: Relationship status indicators
-- *tenure*: Duration (in months) with the company
-- *PhoneService, MultipleLines*: Subscription details for phone services
-- *InternetService, OnlineSecurity, OnlineBackup, DeviceProtection, TechSupport, StreamingTV, StreamingMovies*: Internet-related features
-- *Contract*: Subscription type (Month-to-month, One year, Two years)
-- *PaymentMethod*: Mode of payment
-- *MonthlyCharges, TotalCharges*: Financial details
-- *Churn*: Target variable (Yes/No)
+SUPPLIER: Stores supplier details.
+PRODUCT: Contains product information linked to suppliers.
+STOCK: Manages product stock levels.
+CUST (Customer): Stores customer details.
+ORDERS: Manages customer orders.
+PURCHASE_TABLE: Stores generated purchase orders when stock is low.
+🔑 Key Features
+Automated Purchase Orders: Triggers generate purchase orders when stock falls below the reorder level.
+Stock Update Triggers: Orders automatically update stock levels.
+Data Integrity: Implements foreign keys and constraints to maintain data consistency.
+Category and Price Validation: Ensures products belong to valid categories and have a positive price.
+🚀 Triggers Used
+AUTO_GEN_PUR_ORDER: Automatically inserts a purchase order when stock is below the reorder level.
+STOCK_UPDATE: Updates stock levels when an order is placed.
+📊 Sample Queries
+Insert, update, and delete operations for managing suppliers, products, customers, and orders.
+Query to check stock levels and pending purchase orders.
+🛠️ Technologies Used
+SQL Server for database management
+Triggers & Constraints for automation and data integrity
+Stored Procedures & Functions for modular database operations
+📌 Future Improvements
+Add user authentication for secure access.
+Implement a front-end interface for user-friendly management.
+Optimize triggers for handling bulk transactions efficiently.
+📜 How to Use
+Clone the repository and execute the SQL scripts in SQL Server.
+Insert initial data for suppliers, products, and customers.
+Place an order and observe automatic stock updates and purchase order generation.
+Query tables to monitor inventory levels and pending orders.
+Contact
+For any queries, contact me sulakheprasanth@gmail.com
 
-## 🚀 Project Workflow
-1. *Data Preprocessing*
-   - Handling missing values
-   - Converting categorical variables using *pd.get_dummies*
-   - Scaling numerical features using *MinMaxScaler*
-2. *Exploratory Data Analysis (EDA)*
-   - Understanding feature distributions
-   - Identifying patterns affecting customer churn
-3. *Model Training & Evaluation*
-   - Tried multiple classifiers: *Logistic Regression, Decision Tree, Random Forest, XGBoost, SVM, KNN, Naïve Bayes*
-   - Implemented *Logistic Regression* for ensemble learning
-   - Used *Stratified Train-Test Split (80-20)*
-   - Evaluated models using *Accuracy, Precision, Recall, F1-score*
+Author: Prasanth Sulakhe
 
-## 📊 Model Performance
-| Model               | Train Accuracy | Test Accuracy |
-|---------------------|---------------|--------------|
-| Logistic Regression | 80.42%        | 79.84%       |
-| Decision Tree      | 99.80%        | 73.88%       |
-| Random Forest      | 99.79%        | 78.64%       |
-| XGBoost           | 93.88%        | 78.14%       |
-| KNN               | 83.49%        | 74.80%       |
-| SVM               | 82.05%        | 78.92%       |
-| Naïve Bayes       | 66.54%        | 65.58%       |
-
-
-
-
-## 📌 Key Insights
-- Customers with *month-to-month contracts* are more likely to churn.
-- *Higher monthly charges* are correlated with higher churn rates.
-- Customers with *no tech support or online security* tend to leave more.
-- *Longer tenure* customers are less likely to churn.
-
-## 🏆 Conclusion
-This project successfully predicts customer churn using Machine Learning models. The insights can help telecom companies design better customer retention strategies by targeting at-risk customers and improving their services.
-
-## 📜 License
-This project is licensed under the MIT License.
-
-## 🤝 Connect with Me
-Feel free to reach out for collaborations or discussions:
-- *Author*: Prasanth Sulakhe
-- *Contact Me*: sulakheprasanth@gmail.com
-
----
-⭐ If you found this project helpful, give it a star on GitHub! ⭐
+✅ Contributions Welcome! If you have suggestions or improvements, feel free to open a pull request.
